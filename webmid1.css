@@ -1,0 +1,237 @@
+/* ===== RESET & BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  min-height: 100vh;
+}
+
+/* ===== LAYOUT WRAPPER ===== */
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: 220px;
+  background-color: #2c3e6b;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.sidebar-brand {
+  background-color: #1a2a50;
+  padding: 20px 16px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+  text-align: center;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+}
+
+.nav-item {
+  display: block;
+  padding: 12px 20px;
+  color: #c8d3f0;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.nav-item:hover {
+  background-color: #3a4f85;
+  color: #fff;
+}
+
+.nav-item.active {
+  background-color: #3a4f85;
+  color: #fff;
+  border-left: 4px solid #6ab0f5;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main {
+  flex: 1;
+  padding: 28px 32px;
+  overflow-y: auto;
+}
+
+/* ===== TOPBAR ===== */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.page-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+.search-box {
+  padding: 9px 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 260px;
+  font-size: 14px;
+  outline: none;
+  background: #fff;
+  transition: border 0.2s;
+}
+
+.search-box:focus {
+  border-color: #2c3e6b;
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  margin-bottom: 32px;
+}
+
+.section-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin-bottom: 16px;
+}
+
+/* ===== COURSE CARDS ===== */
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.course-card {
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 160px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+}
+
+.card-top {
+  padding: 20px;
+  flex: 1;
+}
+
+.course-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.prof-name {
+  font-size: 13px;
+  color: rgba(255,255,255,0.85);
+}
+
+.card-bottom {
+  background: rgba(255,255,255,0.95);
+  padding: 12px 20px;
+}
+
+.progress-bar {
+  height: 6px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 4px;
+}
+
+.progress-fill.green  { background: #4caf50; }
+.progress-fill.pink   { background: #e91e8c; }
+.progress-fill.purple { background: #7c4dff; }
+
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #555;
+}
+
+/* Card color themes */
+.card-green {
+  background: linear-gradient(135deg, #56ab2f, #a8e063);
+}
+.card-orange {
+  background: linear-gradient(135deg, #c0392b, #f39c12);
+}
+.card-dark {
+  background: linear-gradient(135deg, #2c3e50, #6c5c8e);
+}
+
+/* ===== EVENT CARDS ===== */
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.event-card {
+  border-radius: 12px;
+  padding: 18px 20px;
+  color: #fff;
+  min-height: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+}
+
+.event-time {
+  font-size: 12px;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 6px;
+}
+
+.event-name {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.event-badge {
+  display: inline-block;
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.badge-orange { background: rgba(255,140,0,0.85); color: #fff; }
+.badge-blue   { background: rgba(30,100,200,0.85); color: #fff; }
+.badge-teal   { background: rgba(0,128,128,0.85); 
+     color: #fff; }
+
+/* Event card backgrounds */
+.event-red  { background: linear-gradient(135deg, #e74c3c, #f39c12); }
+.event-blue { background: linear-gradient(135deg, #2980b9, #6dd5fa); }
+.event-teal { background: linear-gradient(135deg, #11998e, #38ef7d); }
