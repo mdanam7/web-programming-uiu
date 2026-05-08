@@ -6,6 +6,6 @@ function countVowels(str) {
             count++;
         }
 }
-console.log(count);
+return count;
 }
 
