@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+   color: #e90606;
+}
+#nav-left{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+#nav-right{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+}
+#trial-btn{
+color: green;
+    background-color: black;
+    border-radius: 12px;
+    padding: 12px 8px;
+font-weight: bold;
+}
+#nav{
+    display: flex;
+    /*gap: 1000px;*/
+    justify-content: space-between;
+    margin: 0px 10px;
+}
+#left-signin{
+   background-color: #145A8A;
+   color: white;
+   width: 50%;
+   height: 90vh;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   
+}
+#right-signin{
+    padding: 30px 200px;
+    
+}
+#signin{
+    display: flex;
+}
+#signintitle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
